@@ -1,6 +1,6 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.12
-import QtGraphicalEffects 1.12
+import QtQuick
+import QtQuick.Controls
+import Qt5Compat.GraphicalEffects
 
 Item {
     implicitHeight: powerButton.height
@@ -76,13 +76,13 @@ Item {
     Popup {
         id: powerPopup
 
-        height: inputHeight * 1.4 + padding * 2
+        height: inputHeight * 2.2 + padding * 2
         x: powerButton.width + powerList.spacing
         y: -height + powerButton.height
         padding: 15
 
         background: Rectangle {
-            radius: config.CornerRadius * 1.4
+            radius: config.CornerRadius * 1.8
             color: config.PopupBgColor
         }
 
@@ -98,8 +98,8 @@ Item {
             delegate: ItemDelegate {
                 id: powerEntry
 
-                height: inputHeight * 1.4
-                width: inputHeight * 1.4
+                height: inputHeight * 2.2
+                width: inputHeight * 2.2
                 display: AbstractButton.TextUnderIcon
 
                 contentItem: Item {

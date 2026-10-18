@@ -1,13 +1,13 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.12
+import QtQuick
+import QtQuick.Controls
 
 Column {
     spacing: 0
-    
+
     Text {
         id: dateLabel
 
-        anchors.right: parent.right
+        anchors.horizontalCenter: parent.horizontalCenter
         opacity: config.DateOpacity
 
         renderType: Text.NativeRendering
@@ -15,7 +15,7 @@ Column {
         font.pointSize: config.DateSize
         font.bold: config.DateIsBold == "true" ? true : false
         color: config.DateColor
-                
+
         function updateDate() {
             text = new Date().toLocaleDateString(Qt.locale(), config.DateFormat)
         }
@@ -24,7 +24,7 @@ Column {
     Text {
         id: timeLabel
 
-        anchors.right: parent.right
+        anchors.horizontalCenter: parent.horizontalCenter
         opacity: config.TimeOpacity
 
         renderType: Text.NativeRendering

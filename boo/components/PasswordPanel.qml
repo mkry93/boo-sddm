@@ -1,5 +1,5 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.12
+import QtQuick
+import QtQuick.Controls
 
 TextField {
     id: passwordField
@@ -11,14 +11,14 @@ TextField {
     passwordCharacter: "•"
     passwordMaskDelay: 1000
     selectionColor: config.TextFieldTextColor
-    
+
     renderType: Text.NativeRendering
     font.family: config.Font
     font.pointSize: config.GeneralFontSize
     font.bold: true
     color: config.TextFieldTextColor
     horizontalAlignment: TextInput.AlignHCenter
-    
+
     background: Rectangle {
         id: passFieldBg
 

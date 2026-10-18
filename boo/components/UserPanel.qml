@@ -1,7 +1,7 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.12
-import QtGraphicalEffects 1.12
-import QtQml.Models 2.12
+import QtQuick
+import QtQuick.Controls
+import Qt5Compat.GraphicalEffects
+import QtQml.Models
 
 Column {
     property var username: usernameField.text
@@ -74,7 +74,7 @@ Column {
         padding: 15
 
         background: Rectangle {
-            radius: config.CornerRadius * 1.4
+            radius: config.CornerRadius * 1.8
             color: config.PopupBgColor
         }
 
@@ -126,8 +126,8 @@ Column {
             id: pictureBorder
 
             anchors.centerIn: userPicture
-            height: inputWidth / 2.5 + (border.width * 2)
-            width: inputWidth / 2.5 + (border.width * 2)
+            height: inputWidth / 1.5 + (border.width * 2)
+            width: inputWidth / 1.5 + (border.width * 2)
             radius: height / 2
             border.width: config.UserPictureBorderWidth
             border.color: config.UserPictureBorderColor
@@ -197,12 +197,12 @@ Column {
             id: userPicture
             source: ""
 
-            height: inputWidth / 3
-            width: inputWidth / 3
+            height: inputWidth / 1.5
+            width: inputWidth / 1.5
             anchors.horizontalCenter: parent.horizontalCenter
 
             fillMode: Image.PreserveAspectCrop
-            layer.enabled: false
+            layer.enabled: true
             layer.effect: OpacityMask {
                 maskSource: mask
             }
